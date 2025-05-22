@@ -85,15 +85,15 @@
       animating = true;
       mainCard.classList.add('ring-4', 'ring-blue-400', 'ring-opacity-50');
 
-      // Slide right-side boxes out to the right
+      // Slide right-side boxes out to the LEFT
       rightBoxes.forEach(box => {
         box.style.transition = 'transform 0.5s ease';
-        box.style.transform = 'translateX(500px)';
+        box.style.transform = 'translateX(-500px)';
       });
 
       // After sliding out, wait 1s then bring back in from right
       setTimeout(() => {
-        // Prepare boxes off-screen at right (beyond 500px)
+        // Prepare boxes off-screen at right
         rightBoxes.forEach(box => {
           box.style.transition = 'none';
           box.style.transform = 'translateX(500px)';
@@ -110,7 +110,7 @@
           mainCard.classList.remove('ring-4', 'ring-blue-400', 'ring-opacity-50');
           animating = false;
         }, 700);
-      }, 600); // 0.5s slide-out + 0.1s buffer
+      }, 1500); // 0.5s slide-out + 1s wait
     });
   </script></body>
 </html>
