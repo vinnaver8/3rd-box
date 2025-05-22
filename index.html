@@ -70,7 +70,7 @@
       <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Frank&background=EF4444&color=ffffff&size=64" alt="F">
       <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Grace&background=6366F1&color=ffffff&size=64" alt="G">
       <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Heidi&background=F472B6&color=ffffff&size=64" alt="H">
-      <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gray-200 text-xs font-medium text-gray-700 ring-2 ring-white">+3</span>
+      <span class="inline-flex items-centerjustify-center h-6 w-6 rounded-full bg-gray-200 text-xs font-medium text-gray-700 ring-2 ring-white">+3</span>
     </div>
   </div>
 </div>
@@ -85,10 +85,10 @@
       animating = true;
       mainCard.classList.add('ring-4', 'ring-blue-400', 'ring-opacity-50');
 
-      // Slide right-side boxes out to the LEFT
+      // Slide right-side boxes fully out to the LEFT
       rightBoxes.forEach(box => {
         box.style.transition = 'transform 0.5s ease';
-        box.style.transform = 'translateX(-500px)';
+        box.style.transform = 'translateX(-150%)';
       });
 
       // After sliding out, wait 1s then bring back in from right
@@ -96,7 +96,7 @@
         // Prepare boxes off-screen at right
         rightBoxes.forEach(box => {
           box.style.transition = 'none';
-          box.style.transform = 'translateX(1000px)';
+          box.style.transform = 'translateX(150%)';
         });
         // Force reflow
         void rightBoxes[0].offsetWidth;
