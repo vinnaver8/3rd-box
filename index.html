@@ -4,8 +4,9 @@
   <title>ChatGPT AI Meeting Scheduler</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head> 
-  <body class="bg-[#0D0D0D] text-gray-100 min-h-screen flex items-center justify-center p-4">
-    
+  <body class="bg-[#0D0D0D] text-white min-h-screen overflow-x-hidden font-sans antialiased">
+    <section
+  class="metabrain relative min-h-[2000px] overflow-hidden pt-32">
     <div class="wrapper relative md:absolute md:top-[50px] w-[600px] h-[400px]">
     <div class="frame relative w-[680px] h-[500px] bg-black rounded-2xl overflow-hidden shadow-xl">
     <div class="flex flex-col md:flex-row items-start justify-center md:absolute top-[70px] right-[30px] gap-6">
@@ -77,6 +78,7 @@
     </div>
   </div>
 </div></div></div></div>
+    </section>
 <script>
     const mainCard = document.querySelector('.main-card');
     const rightBoxes = document.querySelectorAll('.right-box');
