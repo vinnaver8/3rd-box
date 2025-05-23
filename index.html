@@ -75,8 +75,8 @@
     </div>
   </div>
 </div></div></div></div>
-
-  </div>  <script>
+</div>
+<script>
     const mainCard = document.querySelector('.main-card');
     const rightBoxes = document.querySelectorAll('.right-box');
     let animating = false;
@@ -84,12 +84,12 @@
     mainCard.addEventListener('click', () => {
       if (animating) return;
       animating = true;
-      mainCard.classList.add('ring-2', 'ring-blue-400', 'ring-opacity-20');
+      mainCard.classList.add('ring-4', 'ring-blue-400', 'ring-opacity-50');
 
       // Slide right-side boxes fully out to the LEFT
       rightBoxes.forEach(box => {
         box.style.transition = 'transform 0.5s ease';
-        box.style.transform = 'translateX(-350%)';
+        box.style.transform = 'translateX(-150%)';
       });
 
       // After sliding out, wait 1s then bring back in from right
@@ -113,5 +113,7 @@
         }, 700);
       }, 1500); // 0.5s slide-out + 1s wait
     });
-  </script></body>
+</script>
+
+</body>
 </html>
