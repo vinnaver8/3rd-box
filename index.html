@@ -1,42 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <title>ChatGPT AI Meeting Scheduler</title>
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center p-4">
-  <div class="frame relative w-[600px] h-[400px] bg-black rounded-2xl overflow-hidden shadow-xl">
+</head> 
+  <body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="wrapper relative w-[600px] h-[400px]">
+    <div class="frame relative w-[700px] h-[600px] bg-black rounded-2xl overflow-hidden shadow-xl">
     <div class="flex flex-col md:flex-row items-start justify-center md:absolute top-[70px] right-[30px] gap-6">
-      <!-- Main Card -->
-      <div class="main-card bg-white text-gray-900 rounded-xl shadow-2xl p-6 w-80 cursor-pointer overflow-hidden">
-        <div class="flex justify-between items-center mb-2">
-          <h2 class="text-lg font-semibold">ChatGPT AI Sync</h2>
-          <span class="text-gray-500">…</span>
-        </div>
-        <p class="text-sm text-gray-500 mb-4">2:00 - 3:00 pm • Weekly on Tuesday</p>
-        <p class="text-gray-800 mb-4">Weekly brainstorming on AI enhancements and user feedback analysis.</p>
-        <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg mb-4 hover:bg-blue-700">Join Meeting</button>
-        <div class="flex items-center text-gray-500 text-sm mb-4">
-          <span class="flex items-center"><span class="mr-1">⏰</span>10 minutes before</span>
-          <span class="flex items-center ml-6"><span class="mr-1">👥</span>8 guests</span>
-        </div>
-        <div class="flex -space-x-2 mt-2">
-          <!-- avatars… -->
-        </div>
-        <div class="mt-4 text-gray-700 text-sm">Going?</div>
-        <div class="flex space-x-2 mt-2">
-          <!-- buttons… -->
-        </div>
+      <!-- your Main Card content -->
+      <div class="main-card bg-white text-gray-900 rounded-xl shadow-2xl p-6 w-80 cursor-pointer">
+      <div class="flex justify-between items-center mb-2">
+        <h2 class="text-lg font-semibold">ChatGPT AI Sync</h2>
+        <span class="text-gray-500">...</span>
       </div>
-      <!-- Right Side Boxes -->
-      <div class="flex flex-col space-y-4 mt-6 md:mt-0">
-        <!-- box1, box2, box3… -->
+      <p class="text-sm text-gray-500 mb-4">2:00 - 3:00 pm &bull; Weekly on Tuesday</p>
+      <p class="text-gray-800 mb-4">Weekly brainstorming on AI enhancements and user feedback analysis.</p>
+      <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg mb-4 hover:bg-blue-700">Join Meeting</button>
+      <div class="flex items-center text-gray-500 text-sm mb-4">
+        <span class="flex items-center"><span class="mr-1">⏰</span>10 minutes before</span>
+        <span class="flex items-center ml-6"><span class="mr-1">👥</span>8 guests</span>
       </div>
+      <div class="flex -space-x-2 mt-2">
+        <img class="h-8 w-8 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Alice&background=0D8ABC&color=ffffff&size=64" alt="A">
+        <img class="h-8 w-8 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Bob&background=F06543&color=ffffff&size=64" alt="B">
+        <img class="h-8 w-8 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Carol&background=7F3FBF&color=ffffff&size=64" alt="C">
+        <span class="inline-flex items-center justify-center h-8 w-8 rounded-full bg-gray-200 text-xs font-medium text-gray-700 ring-2 ring-white">+5</span>
+      </div>
+      <div class="mt-4 text-gray-700 text-sm">Going?</div>
+      <div class="flex space-x-2 mt-2">
+        <button class="px-3 py-1 text-xs font-medium text-blue-600 border border-blue-300 rounded-full hover:bg-blue-50">Yes</button>
+        <button class="px-3 py-1 text-xs font-medium text-gray-600 border border-gray-300 rounded-full hover:bg-gray-50">No</button>
+        <button class="px-3 py-1 text-xs font-medium text-gray-600 border border-gray-300 rounded-full hover:bg-gray-50">Maybe</button>
+      </div>
+    </div><!-- Right Side Boxes -->
+<div class="flex flex-col space-y-4 mt-6 md:mt-0">
+  <!-- Box 1 -->
+  <div class="right-box bg-blue-800 text-white rounded-xl p-4 shadow-lg w-64">
+    <h3 class="font-medium mb-1">Prototype Demo</h3>
+    <p class="text-xs text-gray-300 mb-2">9:00 - 10:00 am &bull; Weekly on Thursday</p>
+    <div class="flex items-center text-gray-200 text-xs mb-2">
+      <span class="flex items-center mr-4"><span class="mr-1">👥</span>5 guests</span>
+    </div>
+    <div class="flex -space-x-2 mt-2">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Alice&background=0D8ABC&color=ffffff&size=64" alt="A">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Bob&background=F06543&color=ffffff&size=64" alt="B">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Carol&background=7F3FBF&color=ffffff&size=64" alt="C">
+      <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-gray-200 text-xs font-medium text-gray-700 ring-2 ring-white">+2</span>
     </div>
   </div>
-
-  <script>
+  <!-- Box 2 -->
+  <div class="right-box bg-red-800 text-white rounded-xl p-4 shadow-lg w-64">
+    <h3 class="font-medium mb-1">Discuss Project Tasks</h3>
+    <p class="text-xs text-gray-300 mb-2">11:30 - 1:00 pm &bull; Weekly on Monday</p>
+    <div class="flex items-center text-gray-200 text-xs mb-2">
+      <span class="flex items-center"><span class="mr-1">👥</span>2 guests</span>
+    </div>
+    <div class="flex -space-x-2 mt-2">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Dave&background=3B82F6&color=ffffff&size=64" alt="D">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Eve&background=10B981&color=ffffff&size=64" alt="E">
+    </div>
+  </div>
+  <!-- Box 3 -->
+  <div class="right-box bg-gray-800 text-white rounded-xl p-4 shadow-lg w-64">
+    <h3 class="font-medium mb-1">Design Meeting</h3>
+    <p class="text-xs text-gray-300 mb-2">3:00 - 4:00 pm &bull; Weekly on Friday</p>
+    <div class="flex items-center text-gray-200 text-xs mb-2">
+      <span class="flex items-center"><span class="mr-1">👥</span>6 guests</span>
+    </div>
+    <div class="flex -space-x-2 mt-2">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Frank&background=EF4444&color=ffffff&size=64" alt="F">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Grace&background=6366F1&color=ffffff&size=64" alt="G">
+      <img class="h-6 w-6 rounded-full ring-2 ring-white" src="https://ui-avatars.com/api/?name=Heidi&background=F472B6&color=ffffff&size=64" alt="H">
+      <span class="inline-flex items-centerjustify-center h-6 w-6 rounded-full bg-gray-200 text-xs font-medium text-gray-700 ring-2 ring-white">+3</span>
+    </div>
+  </div>
+</div></div></div></div>
+<script>
     const mainCard = document.querySelector('.main-card');
     const rightBoxes = document.querySelectorAll('.right-box');
     let animating = false;
@@ -44,29 +84,36 @@
     mainCard.addEventListener('click', () => {
       if (animating) return;
       animating = true;
-      mainCard.classList.add('ring-4','ring-blue-400','ring-opacity-50');
+      mainCard.classList.add('ring-4', 'ring-blue-400', 'ring-opacity-50');
 
+      // Slide right-side boxes fully out to the LEFT
       rightBoxes.forEach(box => {
         box.style.transition = 'transform 0.8s ease';
         box.style.transform = 'translateX(-350%)';
       });
 
+      // After sliding out, wait 1s then bring back in from right
       setTimeout(() => {
+        // Prepare boxes off-screen at right
         rightBoxes.forEach(box => {
           box.style.transition = 'none';
           box.style.transform = 'translateX(600%)';
         });
+        // Force reflow
         void rightBoxes[0].offsetWidth;
+        // Slide back to original position
         rightBoxes.forEach(box => {
           box.style.transition = 'transform 0.7s ease';
           box.style.transform = 'translateX(0)';
         });
+        // Cleanup after animation
         setTimeout(() => {
-          mainCard.classList.remove('ring-4','ring-blue-400','ring-opacity-50');
+          mainCard.classList.remove('ring-4', 'ring-blue-400', 'ring-opacity-50');
           animating = false;
         }, 700);
-      }, 1500);
+      }, 1500); // 0.5s slide-out + 1s wait
     });
-  </script>
+</script>
+
 </body>
 </html>
