@@ -103,3 +103,32 @@
     // Listen for scroll or click to trigger card transition
     window.addEventListener('wheel', nextCard);
     window.addEventListener('click', nextCard);
+
+   // keyboard animation//
+    // Highlight key function
+    function highlightKey(key) {
+      const keyElem = document.querySelector('#keyboard .key[data-key="' + key + '"]');
+      if (!keyElem) return;
+      keyElem.classList.add('highlight');
+      setTimeout(() => {
+        keyElem.classList.remove('highlight');
+      }, 300);
+    }
+    // Click handlers for actions
+    document.querySelectorAll('.action-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const key = item.getAttribute('data-key');
+        highlightKey(key);
+      });
+    });
+    // Keyboard key press handlers
+    window.addEventListener('keydown', (e) => {
+      const key = e.key.toUpperCase();
+      if (['V','B','M'].includes(key)) {
+        highlightKey(key);
+      }
+    });
+    // Close button hides command box
+    document.getElementById('closeBtn').addEventListener('click', () => {
+      document.getElementById('commandBox').style.display = 'none';
+    });
