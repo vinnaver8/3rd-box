@@ -87,3 +87,15 @@
       50%  { transform: scale(1.4); opacity: 0; }
       100% { transform: scale(1); opacity: 0.5; }
     }
+
+/* auto typing */
+/* Optional: cursor for typewriter effect */
+    .typing-text::after {
+      content: '|';
+      opacity: 0.5;
+      animation: blink-caret 1s steps(1) infinite;
+    }
+    @keyframes blink-caret {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 0.5; }
+    }
