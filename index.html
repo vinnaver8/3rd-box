@@ -96,12 +96,28 @@ Huly is a process, project, time, and knowledge management platform that provide
 <svg width="300" height="300" viewBox="0 0 300 300"
      xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Gradient for the ring -->
+    <!-- Denser dots pattern -->
+    <pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#fff" opacity="0.4"/>
+    </pattern>
+
+    <!-- Ring gradient -->
     <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1E90FF"/>
       <stop offset="50%" stop-color="#7B68EE"/>
       <stop offset="100%" stop-color="#FFA500"/>
     </linearGradient>
+
+    <!-- Mask to softly fade out the dot-field -->
+    <radialGradient id="fadeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="fadeMask">
+      <rect width="300" height="300" fill="black"/>
+      <!-- circle of white → transparent to reveal pattern -->
+      <circle cx="150" cy="150" r="100" fill="url(#fadeGrad)"/>
+    </mask>
 
     <!-- Bell symbol -->
     <symbol id="bell" viewBox="0 0 24 24">
@@ -110,12 +126,11 @@ Huly is a process, project, time, and knowledge management platform that provide
     </symbol>
   </defs>
 
-  <!-- Spinning, glowing ring -->
+  <!-- Spinning, pulsing ring -->
   <circle cx="150" cy="150" r="80"
           fill="none"
           stroke="url(#ringGrad)"
           stroke-width="10">
-    <!-- rotate around center -->
     <animateTransform attributeName="transform"
                       attributeType="XML"
                       type="rotate"
@@ -123,19 +138,22 @@ Huly is a process, project, time, and knowledge management platform that provide
                       to="360 150 150"
                       dur="10s"
                       repeatCount="indefinite"/>
-    <!-- pulse stroke-width for glow effect -->
     <animate attributeName="stroke-width"
              values="10;14;10"
              dur="2s"
              repeatCount="indefinite"/>
-    <!-- pulse opacity -->
     <animate attributeName="stroke-opacity"
              values="0.6;1;0.6"
              dur="2s"
              repeatCount="indefinite"/>
   </circle>
 
-  <!-- Centered bell icon -->
+  <!-- Large soft dot-field (200×200) -->
+  <circle cx="150" cy="150" r="200"
+          fill="url(#dots)"
+          mask="url(#fadeMask)"/>
+
+  <!-- Bell icon -->
   <use href="#bell" x="126" y="126" width="48" height="48"/>
 
   <!-- Notification badge -->
